@@ -1,0 +1,78 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+        <meta charset="UTF-8">
+        <meta name="viewport">
+        <style>
+            .rock {
+                width: 120px;
+                height: 120px;
+                border-radius: 60px;
+                border: 3px solid white;
+                background-color: transparent;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+            .paper {
+                width: 120px;
+                height: 120px;
+                border-radius: 60px;
+                border: 3px solid white;
+                background-color: transparent;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+
+            .scissors {
+                width: 120px;
+                height: 120px;
+                border-radius: 60px;
+                border: 3px solid white;
+                background-color: transparent;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+            body {
+                background-color: black;
+                color: white;
+                font-family: Arial;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Rock Paper Scissors</h1>
+        <button class="rock" onclick="
+            computerChoice = Math.random();
+            if (computerChoice >= 0 && computerChoice < 1/3) {
+                alert('Tie!!\nYou chose Rock and computer chose Rock')
+            } else if (computerChoice >= 1/3 && computerChoice < 2/3) {
+                alert('You Lose!!\nYou chose Rock and computer chose Paper')
+            } else {
+                alert('You Win!!\nYou chose Rock and computer chose Scissors')
+            }"><img src="/static/images/rock-emoji.png" height="50px"></button>
+        <button class="paper" onclick="
+        computerChoice = Math.random();
+        if (computerChoice >= 0 && computerChoice < 1/3) {
+            alert('You Win!!\nYou chose Paper and computer chose Rock')
+        } else if (computerChoice >= 1/3 && computerChoice < 2/3) {
+            alert('Tie!!\nYou chose Paper and computer chose Paper')
+        } else {
+            alert('You Lose!!\nYou chose Paper and computer chose Scissors')
+        }"><img src="/static/images/paper-emoji.png" height="50px"></button>
+        <button class="scissors" onclick="
+        computerChoice = Math.random();
+        if (computerChoice >= 0 && computerChoice < 1/3) {
+            alert('You Lose!!\nYou chose Scissors and computer chose Rock')
+        } else if (computerChoice >= 1/3 && computerChoice < 2/3) {
+            alert('You Win!!\nYou chose Scissors and computer chose Paper')
+        } else {
+            alert('Tie!!\nYou chose Scissors and computer chose Scissors')
+        }"><img src="/static/images/scissors-emoji.png" height="50px"></button>
+
+        <script>
+            let computerChoice;
+        </script>
+    </body>
+</html>
